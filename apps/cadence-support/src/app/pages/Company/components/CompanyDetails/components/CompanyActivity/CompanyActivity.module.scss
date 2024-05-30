@@ -1,0 +1,114 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../mixins';
+
+.companyActivity {
+  position: relative;
+
+  .dropdown {
+    z-index: 10;
+    display: none;
+    position: absolute;
+    border-radius: 20px;
+    right: -160px;
+    top: 120%;
+    padding: 20px;
+    box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+    background: $white;
+
+    width: 600px;
+    min-height: 460px;
+    max-height: 460px;
+    overflow: hidden;
+    color: $black;
+
+    &.open {
+      display: block;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+      margin-top: 0.75rem;
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    .list {
+      max-height: 360px;
+      overflow-y: scroll;
+      border-radius: 12px;
+      &::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 1.4rem auto;
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .iconWrapper {
+          background: rgba(86, 113, 145, 0.07);
+          flex: 0.4 1 auto;
+          padding: 16px;
+          width: 30px;
+          height: 42px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          border-radius: 15px;
+          color: $lightBlue;
+          margin-right: 0.75rem;
+          // @include screen-1024{
+          //   padding: 14px;
+          //   margin-right: 2px;
+          // }
+          svg {
+            height: 12px;
+            width: 100%;
+          }
+        }
+
+        .details {
+          flex: 4 1 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          .activityType {
+            font-weight: 600;
+            font-size: 1rem;
+          }
+
+          .activityDesc {
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: $lightBlue;
+          }
+        }
+
+        .createdAt {
+          display: flex;
+          min-width: 100px;
+          column-gap: 4px;
+          // @media screen and (min-width: 1024px) and (max-width:1280px) {
+          //   flex-direction: column;
+          //   row-gap: 0;
+          // }
+          p {
+            font-size: 0.75rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

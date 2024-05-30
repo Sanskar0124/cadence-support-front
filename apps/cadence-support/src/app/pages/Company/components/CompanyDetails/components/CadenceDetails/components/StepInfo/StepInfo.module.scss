@@ -1,0 +1,123 @@
+@import '../../../../../../../../../../../../libs/themes/src/variables';
+.stepInfo {
+  height: 100%;
+  background: linear-gradient(
+    106.52deg,
+    rgba(219, 209, 243, 0.1) -11.57%,
+    rgba(206, 210, 231, 0.1) 50.39%,
+    rgba(191, 211, 230, 0.1) 116.35%
+  );
+
+  display: flex;
+  flex-direction: column;
+  transition: 1s ease-in-out !important;
+  border-radius: 20px;
+  padding: 10px;
+  width: 40%;
+
+  .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+    padding: 15px 24px;
+    .closeBtn {
+      width: 1.7rem;
+      height: 1.7rem;
+      background: none;
+      color: $lightBlue;
+      border-radius: 50%;
+      border: none;
+      z-index: 5;
+
+      &:hover {
+        background: $whiteShade1;
+      }
+    }
+
+    > h3 {
+      font-weight: 500;
+      font-size: 1.05rem;
+
+      span {
+        font-weight: 700;
+        margin-right: 5px;
+        font-size: 1.05rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 5px 15px 5px;
+    overflow: hidden;
+    .message {
+      margin: 5rem;
+      text-align: center;
+      color: $lightBlue;
+      font-size: 16px;
+    }
+    .contentAndPeople {
+      width: 100%;
+
+      .mailSlider {
+        margin-bottom: 32px;
+        .tabBtn {
+          color: $lightBlue;
+          font-weight: 600;
+          font-size: 1.14rem;
+        }
+        .activeTab {
+          color: $mainPurple;
+          font-weight: 600;
+        }
+      }
+
+      .navSlider {
+        width: 300px;
+        margin: 0 auto 22px auto;
+
+        .tabs {
+          border-radius: 20px;
+          border: 1px solid #d8ecff;
+          height: 48px !important;
+          background: linear-gradient(
+            106.52deg,
+            rgba(162, 130, 232, 0.1) -11.57%,
+            rgba(126, 142, 231, 0.1) 50.39%,
+            rgba(68, 153, 233, 0.1) 116.35%
+          );
+          color: $lightBlue;
+
+          .tabBtns {
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+          }
+
+          .tabBtnActive {
+            color: $mainPurple;
+            background: $white !important;
+          }
+
+          .activePill {
+            border-radius: 20px;
+            background: $white !important;
+          }
+        }
+      }
+      .contentBox {
+        overflow-y: scroll;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+env: standard
+runtime: nodejs14
+service: cadence-support-frontend
+
+handlers:
+  - url: /static
+    static_dir: dist/apps/cadence-support/static
+    #secure: always
+
+  - url: /(.*\.(json|ico|js|css|gif|png))$
+    static_files: dist/apps/cadence-support/\1
+    upload: dist/apps/cadence-support/.*\.(json|ico|js|css|gif|png)$
+    #secure: always
+
+  - url: /.*
+    static_files: dist/apps/cadence-support/index.html
+    upload: dist/apps/cadence-support/index.html
+    secure: always
+    redirect_http_response_code: 301

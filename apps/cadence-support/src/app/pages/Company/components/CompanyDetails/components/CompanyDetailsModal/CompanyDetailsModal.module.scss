@@ -1,0 +1,139 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+
+.companyDetailsModal {
+  width: 480px;
+  height: 500px;
+
+  .companyDetails {
+    width: 440px;
+
+    .heading {
+      margin-top: -2px;
+
+      h3 {
+        transform: translateY(-2px);
+        color: $black;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    .main {
+      margin: 30px 0;
+      display: flex;
+      height: 330px;
+      overflow-y: scroll;
+      flex-direction: column;
+      gap: 20px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .duration {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-self: flex-start;
+        gap: 7rem;
+      }
+      .inputContainer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-self: flex-start;
+        gap: 33px;
+      }
+
+      .inputGroup {
+        .accountType {
+          width: 100%;
+        }
+        > label {
+          margin-bottom: 0.5rem;
+          font-weight: 450;
+          font-size: 14px;
+          line-height: 20px;
+          color: $lightBlue;
+        }
+        .error {
+          color: $red;
+        }
+        .inputWithError {
+          border-color: $red;
+        }
+        &.error {
+          label {
+            color: $red;
+          }
+          input {
+            border-color: $red;
+          }
+          textarea {
+            border-color: $red;
+          }
+          > div > div {
+            border-color: $red;
+          }
+        }
+        .trialDuration,
+        .licenses {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          > Input {
+            width: 82px !important;
+          }
+          .numberInput {
+            text-align: left;
+            width: 82px !important;
+          }
+          .input {
+            text-align: left;
+            width: 10rem !important;
+          }
+          .arrowsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-left: -4px;
+            margin-top: -2px;
+
+            .arrowBtn {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 4px;
+              width: 32px !important;
+              height: 18px !important;
+              > svg {
+                width: 5.98px;
+
+                height: 3.83px;
+              }
+            }
+          }
+        }
+      }
+      .remainingDays {
+        font-size: 14px;
+        font-weight: 400;
+        color: $lightBlue;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    }
+
+    .footer {
+      .createBtn {
+        width: 100%;
+        border-radius: 15px;
+        display: inline-block;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

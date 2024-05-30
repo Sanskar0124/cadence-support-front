@@ -1,0 +1,186 @@
+@import '../../../../../../../../libs/themes/src/variables';
+
+.companyDetails {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  // max-height: fit-content !important;
+
+  .header {
+    display: flex;
+    align-items: center;
+    // gap: 40px;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 18px;
+      gap: 10px;
+
+      .info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .companyProfilePicture {
+          width: 60px;
+          height: 60px;
+          border-radius: 15px;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          .createdAt {
+            color: $lightBlue;
+          }
+        }
+      }
+
+      button {
+        display: block;
+        background: none;
+        border: none;
+        color: $lightBlue;
+      }
+
+      .heading {
+        display: flex;
+        gap: 10px;
+        min-height: 20px;
+        min-width: 200px;
+        & > div::after {
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(180, 180, 180, 0.5),
+            transparent
+          );
+        }
+      }
+
+      .createdAt {
+        color: $lightBlue;
+        transform: translateY(-5px);
+        > div {
+          display: inline-block;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+          margin-right: 3px;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 1.42rem;
+      align-items: center;
+      .progressClockButton {
+        border-radius: 15px;
+        // > svg {
+        //   color: $black;
+        // }
+      }
+
+      .companyInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        // align-items: end;
+        > h2 {
+          font-weight: 600;
+          font-size: 1rem;
+          color: $lightBlue;
+        }
+        .status {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          > p {
+            display: flex;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: 10px;
+            width: fit-content;
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+          }
+          .configured {
+            background: $greenTagBackground;
+            color: $ringover;
+          }
+          .opened {
+            background: $yellowTagBackground;
+            color: $orange;
+          }
+          .notconfigured {
+            background: $redTagBackground;
+            color: $red;
+          }
+          .mailsent {
+            background: $blueTagBackground;
+            color: $blue;
+          }
+          .common {
+            color: #86a789;
+            background: linear-gradient(
+              315deg,
+              rgba(154, 211, 121, 0.12) 0%,
+              rgba(119, 189, 81, 0.12) 100%
+            );
+          }
+        }
+      }
+    }
+  }
+
+  .subHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .detailTypeSliderWrapper {
+      flex: 1;
+      gap: 1rem;
+      .tabs {
+        // width: 678px !important;
+        .tabBtns {
+          display: block;
+          color: $black;
+          font-weight: 400;
+          z-index: 0 !important;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+        .tabBtnActive {
+          font-weight: 600;
+          color: $mainPurple;
+          z-index: 0 !important;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    height: 100%;
+    max-height: 100%;
+    // overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}

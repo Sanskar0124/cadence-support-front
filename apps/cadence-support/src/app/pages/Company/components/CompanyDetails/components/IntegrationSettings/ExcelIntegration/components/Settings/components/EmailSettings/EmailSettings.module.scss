@@ -1,0 +1,178 @@
+@import '../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.EmailSettings {
+  margin: 0 40px;
+  h1 {
+    color: $black;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  h2 {
+    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  h3 {
+    color: $lightBlue;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .inputDisplay {
+    background: $white;
+    width: 120px;
+    margin-top: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 15px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin-right: 10px;
+    span {
+      text-transform: capitalize;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 88px;
+    row-gap: 40px;
+    width: 100%;
+  }
+  .sendingCalendar {
+    display: flex;
+    div {
+      width: 196px;
+      padding: 15px 20px;
+      margin-right: 10px;
+    }
+  }
+  .maxEmails {
+    justify-content: center;
+  }
+  .timeBetween {
+    display: flex;
+    div {
+      justify-content: center;
+    }
+  }
+  .teamException {
+    background-color: $whiteShade2;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .calendar {
+    margin: 0 0 40px 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c0cccd;
+  }
+
+  .ruleTags {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    div {
+      display: flex;
+      align-items: center;
+      background-color: $whiteShade1;
+      color: #a6b3c4;
+      padding: 8px;
+      margin: 15px 0 44.5px 0;
+      border-radius: 10px;
+      min-width: 156.33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        color: $black;
+        margin-left: 5px;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+  }
+  .disable {
+    opacity: 0.72;
+  }
+  .unsubscribed {
+    border-bottom: 1px solid #c0cccd;
+    span {
+      display: flex;
+      margin-bottom: 44.5px;
+      h2 {
+        margin-right: 40px;
+      }
+    }
+    .click {
+      min-width: 520px;
+      margin-bottom: 40px;
+    }
+  }
+  .bounced {
+    margin: 40px 0;
+    border-bottom: 1px solid #c0cccd;
+  }
+
+  .domain {
+    .form {
+      display: grid;
+      column-gap: 88px;
+      row-gap: 10px;
+      grid-template-columns: 1fr;
+      margin: 40px 0;
+      @media screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      .input {
+        width: 100%;
+      }
+    }
+    .table {
+      background-color: $whiteShade2;
+      border: 2px solid $whiteShade2;
+      border-radius: 10px;
+      margin-bottom: 144px;
+      width: 911px;
+      div {
+        display: grid;
+        place-content: center;
+        grid-template-columns: 98px 264px 399px 150px;
+      }
+      .head {
+        height: 32px;
+
+        h2 {
+          color: $veryLightBlue;
+          font-weight: 700;
+          font-size: 12px;
+          padding: 6px 0 11px 22px;
+        }
+      }
+      .row {
+        background-color: $white;
+        height: 44px;
+        align-items: center;
+        border-radius: 0px 0px 10px 10px;
+        h2 {
+          padding: 6px 0 6px 20px;
+          font-weight: 400;
+          font-size: 14px;
+        }
+        .validated {
+          display: flex;
+          svg {
+            margin: 0 8px 0 8px;
+            display: flex;
+            align-items: center;
+          }
+          h2 {
+          }
+        }
+      }
+    }
+  }
+}

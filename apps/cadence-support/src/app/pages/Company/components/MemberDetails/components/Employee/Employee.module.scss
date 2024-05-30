@@ -1,0 +1,183 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+
+.employeeInfoCard {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(231, 235, 255, 0.12);
+  border-radius: 15px;
+  padding: 1rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    .left {
+      display: flex;
+      gap: 0.8rem;
+      flex: 0.92;
+      max-width: 280px;
+      .userProfileImage {
+        width: 48px;
+        border-radius: 50%;
+        height: 48px;
+        object-fit: cover;
+      }
+      .user {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        > h3 {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        > p {
+          background: rgba(86, 113, 145, 0.06);
+          border-radius: 8px;
+          font-size: 0.75rem;
+          color: $lightBlue;
+          width: 200px;
+          padding: 4px 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .name {
+          width: 100px;
+          height: 24px;
+        }
+
+        .userID {
+          width: 140px;
+          height: 12px !important;
+          min-height: 12px !important;
+        }
+      }
+    }
+
+    .right {
+      margin-right: 24px;
+      flex: 0.02;
+      transform: rotate(90deg);
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      > p {
+        display: flex;
+        padding: 8px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 10px;
+        width: fit-content;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+      }
+      .configured {
+        background: $greenTagBackground;
+        color: $ringover;
+      }
+      .pending {
+        background: $yellowTagBackground;
+        color: $orange;
+      }
+      .notconfigured {
+        background: $redTagBackground;
+        color: $red;
+      }
+      .mailsent {
+        background: $blueTagBackground;
+        color: $blue;
+      }
+      .common {
+        // background: linear-gradient(
+        //   315deg,
+        //   rgba(216, 100, 169, 0.12) 0%,
+        //   rgba(216, 100, 169, 0.12) 100%
+        // );
+        // color: #d864a9;
+        color: #a282e8;
+        background: rgba(79, 37, 169, 0.09);
+      }
+    }
+    .employeeInfoCell {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      p {
+        color: $lightBlue;
+        font-size: 0.75rem;
+      }
+      &.onboardingContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .tag {
+          padding: 5px 10px;
+          display: flex;
+          align-items: center;
+          height: fit-content;
+          border-radius: 10px;
+          font-size: 0.75rem;
+        }
+        .completed {
+          color: $ringover;
+          background: $greenTagBackground;
+        }
+        .notCompleted {
+          color: $red;
+          background: $redTagBackground;
+        }
+      }
+      &.userEmail,
+      &.userPhone {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        > div {
+          display: flex;
+          gap: 4px;
+          flex-direction: column;
+          &:nth-child(2) {
+            flex-direction: row;
+            gap: 10px;
+            > svg {
+              background: $lightBlue;
+              width: 32px;
+              height: 100%;
+              padding: 8px;
+              border-radius: 50%;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      &.role {
+        text-transform: capitalize;
+      }
+
+      // className present in Skeleton component
+      .label {
+        height: 14;
+        width: 100px;
+      }
+      .value {
+        height: 30px;
+        width: 100%;
+        min-height: 10px !important;
+      }
+    }
+  }
+}

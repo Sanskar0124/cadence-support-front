@@ -1,0 +1,201 @@
+@import '../../../../../../../../../../../../../../../libs/themes/src/variables';
+.CustomObjects {
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    .tabs {
+      display: flex;
+      justify-content: center;
+      .buttonSliderClassName {
+        background: linear-gradient(
+          106.52deg,
+          rgba(162, 130, 232, 0.1) -11.57%,
+          rgba(126, 142, 231, 0.1) 50.39%,
+          rgba(68, 153, 233, 0.1) 116.35%
+        );
+        border: 1px solid #e7ebff;
+        border-radius: 15px;
+      }
+      .buttonClassName {
+        color: $lightBlue;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .activeBtnClassName {
+        color: $mainPurple;
+        background: $white !important;
+        border-radius: 10px;
+      }
+      .activePillClassName {
+        background: $white !important;
+        border-radius: 10px;
+      }
+    }
+  }
+  .card {
+    margin: 15px 0;
+    box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+    border: 1px solid #e7ebff;
+    border-radius: 10px;
+    background-color: $white;
+    padding: 20px;
+
+    h1 {
+      color: $black;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      max-height: 70vh;
+
+      .formRow {
+        display: flex;
+        padding: 0 0;
+        gap: 12px;
+
+        .formColumn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          // background: rgba(245, 246, 247, 0.08);
+          border: 'none';
+          border-radius: 15px;
+          min-height: 84px;
+          &.showBorder {
+            border: 1px dashed rgba(86, 113, 145, 0.64);
+          }
+          .dragItem {
+            width: 100%;
+            .inputSelectBox {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              .current {
+                display: flex;
+                .inputBox {
+                  width: 58%;
+                  .inputSelect {
+                    border-radius: 15px 0 0 15px;
+                    cursor: not-allowed;
+                  }
+                }
+                .selectBox {
+                  width: 39%;
+                  cursor: not-allowed;
+                }
+                .delete {
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: column;
+                  cursor: pointer;
+                  margin-left: 3px;
+                }
+              }
+              .addMore {
+                .button {
+                  min-width: 120px;
+                }
+              }
+            }
+            .intInput {
+              text-align: left !important;
+            }
+            .disabled {
+              background-color: rgb(250, 246, 246);
+              cursor: not-allowed;
+            }
+            .radioBox {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              gap: 10px;
+              .label {
+                display: flex;
+                align-self: center;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 19px;
+                color: $black;
+              }
+              .btnBox {
+                display: flex;
+                justify-content: flex-start;
+                width: fit-content;
+                gap: 40px;
+                .btn {
+                  display: flex;
+                  justify-content: center;
+                  gap: 10px;
+                  .radio {
+                    align-self: center;
+                    cursor: not-allowed;
+                    span {
+                      border: 1px solid #dadce0;
+                      box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+                      border-radius: 24px;
+                    }
+                  }
+                  .btnLabel {
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 19px;
+                    align-self: center;
+                    color: $black;
+                    text-transform: capitalize;
+                  }
+                }
+              }
+            }
+            .edit {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              background: $whiteShade1;
+              border-radius: 15px;
+              padding-left: 12px;
+              padding-right: 12px;
+              min-height: 44px;
+              cursor: not-allowed;
+              .left {
+                display: flex;
+                gap: 14px;
+                align-self: center;
+                .dots {
+                  align-self: center;
+                  display: flex;
+                }
+                .editLabel {
+                  font-weight: 600;
+                  font-size: 14px;
+                  align-self: center;
+                  line-height: 19px;
+                  color: $lightBlue;
+                }
+              }
+              .right {
+                display: flex;
+                align-self: center;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    button {
+      background: $primaryGradient;
+      padding: 15px;
+      color: $white;
+      border-radius: 15px;
+      border: none;
+      width: 400px;
+      margin: 12px auto;
+      display: block;
+    }
+  }
+}

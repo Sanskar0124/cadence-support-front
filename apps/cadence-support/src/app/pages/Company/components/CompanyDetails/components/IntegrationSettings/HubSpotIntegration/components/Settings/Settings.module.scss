@@ -1,0 +1,34 @@
+@import '../../../../../../../../../../../../../libs/themes/src/variables';
+.settings {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 22px;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+  .searchbar {
+    position: absolute;
+    z-index: 199;
+    top: 3%;
+    right: 4%;
+
+    @media screen and (min-width: 1280px) and (max-width: 1430px) {
+      top: 3%;
+      right: 4%;
+    }
+    @media screen and (min-width: 1440px) and (max-width: 1919px) {
+      top: 3%;
+      right: 4%;
+    }
+    @media screen and (min-width: 1920px) {
+      top: 3%;
+      right: 4%;
+    }
+  }
+  .page {
+    margin-top: 3rem;
+    overflow-y: scroll;
+    height: calc(100vh - 250px);
+    width: 100%;
+  }
+}

@@ -1,0 +1,431 @@
+@import '../../../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../../../mixins';
+
+$grid-default: 34% 18% 18% 16% 17%;
+$grid-1280: 36% 24% 12% 10% 18%;
+
+.cadence {
+  width: 100%;
+
+  height: calc(100vh - 210px);
+  &::-webkit-scrollbar {
+    display: none;
+
+    scrollbar-width: none;
+  }
+  border-radius: 15px;
+  padding-top: 0;
+  position: relative;
+  overflow: hidden;
+  background: $white;
+  .header {
+    background: white;
+    width: 100%;
+
+    top: 0;
+    z-index: 5;
+
+    .row {
+      display: grid;
+      grid-template-columns: $grid-default;
+
+      @include screen-1280 {
+        grid-template-columns: $grid-1280;
+      }
+
+      font-size: 14px;
+      font-weight: 600;
+      color: $veryLightBlue;
+      background: rgba(245, 246, 247, 0.48);
+      border-radius: 10px;
+      width: 100%;
+
+      .col {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 10px;
+        text-align: center;
+        overflow: hidden;
+
+        &:first-child {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          // padding: 0.4rem 10px;
+        }
+      }
+    }
+  }
+
+  .body {
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 305px);
+    padding-top: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    .placeholder {
+      display: grid;
+      grid-template-columns: $grid-default;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: $grid-default;
+      font-size: 0.75rem;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+
+      @include screen-1280 {
+        grid-template-columns: $grid-1280;
+      }
+
+      &:hover,
+      &.active {
+        background-color: #f0f8fe;
+        border-radius: 20px;
+      }
+
+      // @include screen-1024 {
+      //   grid-template-columns: $grid-1024;
+      //   font-size: 0.6rem;
+      // }
+
+      .col {
+        padding: 4px 2px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        overflow: hidden;
+        &:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 14px;
+          > div {
+            &:first-child {
+              width: 40px;
+              height: 40px;
+              min-width: 40px;
+              border-radius: 14px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: linear-gradient(
+                106.52deg,
+                rgba(162, 130, 232, 0.1) -11.57%,
+                rgba(126, 142, 231, 0.1) 50.39%,
+                rgba(68, 153, 233, 0.1) 116.35%
+              );
+              > svg {
+                height: 16px;
+                width: 14px;
+              }
+            }
+            &:last-child {
+              .top {
+                color: $lightBlue;
+                span {
+                  font-size: 14px;
+                  &:first-child {
+                    text-transform: capitalize;
+                  }
+                }
+                i {
+                  margin: 0 2px;
+                  margin-left: 2px;
+                }
+              }
+              .bottom {
+                font-size: 14px;
+                font-weight: 600;
+                color: $black;
+              }
+            }
+          }
+        }
+
+        &.leads {
+          > span {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(
+              106.52deg,
+              rgba(135, 151, 233, 0.1) -11.57%,
+              rgba(166, 135, 233, 0.1) -11.56%,
+              rgba(82, 162, 235, 0.1) 116.35%
+            );
+            border-radius: 100px;
+            padding: 8px 12px;
+            color: $mainPurple;
+          }
+        }
+
+        &.status {
+          > span {
+            padding: 8px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 10px;
+            &.notStarted,
+            &.processing {
+              background: rgba(109, 70, 107, 0.2);
+
+              color: #6d466b;
+            }
+
+            &.inProgress {
+              background: $greenTagBackground;
+              color: $ringover;
+            }
+
+            &.paused {
+              background: $yellowTagBackground;
+              color: $orange;
+              display: flex;
+              gap: 4px;
+            }
+
+            &.stopped {
+              background: $redTagBackground;
+              color: $red;
+            }
+
+            > span.pausedIcon {
+              height: 4px;
+            }
+          }
+        }
+
+        &.templateCardCreatedBy {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
+          padding-left: 0.8rem;
+          gap: 1rem;
+
+          .profile {
+            position: relative;
+            .userProfilePicture {
+              display: table-cell;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .subdepartmentProfilePicture {
+              width: 20px;
+              height: 20px;
+              border: 2px solid $white;
+              background-color: $lightBlue;
+              border-radius: 50%;
+              position: absolute;
+              transform: translate(50%, -50%);
+            }
+          }
+
+          .createdByDetails {
+            display: flex;
+            flex-direction: column;
+            height: 48px;
+            gap: 2px;
+            margin-top: 12px;
+            justify-content: center;
+
+            span {
+              &:first-child {
+                color: $black;
+                margin-bottom: 2px;
+              }
+
+              &:last-child {
+                color: $lightBlue;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          > span {
+            font-weight: 600;
+          }
+        }
+        // &.userID {
+        //   white-space: nowrap;
+        //   max-width: 200px;
+        //   text-overflow: ellipsis;
+        //   overflow: hidden;
+        // }
+
+        &.memberRole {
+          text-transform: capitalize;
+        }
+
+        &.name {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            > span {
+              position: relative;
+              > span {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                bottom: 0;
+                right: 0;
+                outline: 2px solid $white;
+
+                &.statusRed {
+                  background: linear-gradient(315deg, #ff8888 0%, #f05f5f 100%);
+                }
+
+                &.statusGreen {
+                  background: $ringoverGradient;
+                }
+              }
+            }
+          }
+
+          .accounts {
+            display: flex;
+            gap: 10px;
+            > p {
+              width: 24px;
+              height: 24px;
+              position: relative;
+              .googleIcon {
+                color: #4285f4;
+                width: 100%;
+                height: 100%;
+                &.Disabled {
+                  color: $grey;
+                }
+              }
+
+              .salesforceIcon {
+                color: #00a1e0;
+                width: 100%;
+                height: 100%;
+
+                &.Disabled {
+                  color: $grey;
+                }
+              }
+
+              svg.minusRedGradient {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                bottom: 2px;
+                right: -2px;
+                z-index: 4;
+                color: $red;
+              }
+            }
+          }
+        }
+
+        .memberProfilePicture {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .placeholder {
+          width: 100%;
+          height: 30px;
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &.members {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          padding-right: 1.5rem;
+
+          display: flex;
+          gap: 1.4rem;
+          .lengthInfo {
+            flex: 1.8 1 auto;
+          }
+
+          .imageBox {
+            padding: 10px;
+            display: flex;
+            flex: 4 2 auto;
+            align-items: center;
+
+            .image {
+              width: 28px;
+              height: 28px;
+              object-fit: cover;
+              margin: 0 -4.2px;
+              border-radius: 50%;
+              border: 2px solid #f2f6fd;
+            }
+
+            .numberCircle {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              margin: 0 -5px;
+              font-size: 10px;
+              font-weight: 600;
+              color: $mainPurple;
+              background: #f2f6fd;
+              border-radius: 50%;
+              border: 1.5px solid $mainPurple;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+
+    .noCadences {
+      // margin-top: 1rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      > h4 {
+        margin-top: 40px;
+        font-size: 1.14rem;
+        font-weight: 700;
+        color: $veryLightBlue;
+        display: inline-block;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

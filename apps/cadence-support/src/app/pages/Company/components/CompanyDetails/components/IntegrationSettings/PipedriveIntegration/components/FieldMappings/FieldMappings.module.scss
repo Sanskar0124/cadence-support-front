@@ -1,0 +1,31 @@
+@import '../../../../../../../../../../../../../libs/themes/src/variables';
+.fieldMappings {
+  padding: 10px 0px;
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #fafbfc;
+    padding: 39px 23.33px;
+    border-radius: 10px;
+    height: 72px;
+    div {
+      display: flex;
+      align-items: center;
+      h3 {
+        margin-right: 21px;
+      }
+    }
+  }
+}
+.linePlaceholders {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+  .linePlaceholder {
+    height: 70px;
+    width: 100%;
+  }
+}

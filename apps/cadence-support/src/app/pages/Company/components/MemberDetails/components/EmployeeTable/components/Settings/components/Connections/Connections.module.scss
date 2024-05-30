@@ -1,0 +1,46 @@
+@import '../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.connectionsContainer {
+  .cHeading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    display: inline-block;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .settings {
+    display: flex;
+    flex-direction: column;
+    & > div {
+      width: fit-content;
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      display: flex;
+      align-items: center;
+      background-color: #f5f6f7;
+      height: 50px;
+      padding: 0 20px;
+      border-radius: 20px;
+      color: #394759;
+      svg {
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+      }
+      &.active {
+        border: 1px solid #a282e8;
+      }
+      button {
+        font-size: 1rem;
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+
+@mixin icon-background($borderRadius, $side) {
+  width: $side;
+  height: $side;
+  min-width: $side;
+  border-radius: $borderRadius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    106.52deg,
+    rgba(162, 130, 232, 0.1) -11.57%,
+    rgba(126, 142, 231, 0.1) 50.39%,
+    rgba(68, 153, 233, 0.1) 116.35%
+  );
+}
+
+.left {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+  height: max-content;
+  position: relative;
+  .icon {
+    position: relative;
+    @include icon-background(10px, 38px);
+    .pausedIcon {
+      position: absolute;
+      bottom: -22px;
+      right: -24px;
+    }
+  }
+  .companyDetails {
+    flex: 1;
+    // margin-left: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    > p {
+      &:first-child {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 3px;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+      &:last-child {
+        font-weight: 400;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .right {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: max-content;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 16px;
+    color: $veryLightBlue;
+  }
+}

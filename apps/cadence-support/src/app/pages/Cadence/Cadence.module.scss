@@ -1,0 +1,149 @@
+@import '../../../../../../libs/themes/src/variables';
+@import '../mixins';
+
+.container {
+  @include screen-1280 {
+    width: 94%;
+  }
+  .cadencePage {
+    .title {
+      display: flex;
+      align-items: center;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .right {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    .main {
+      margin-top: 20px;
+      .cadenceHeader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 5px 25px 5px 20px;
+        transition: 0.25s ease-in-out;
+
+        &.viewModeActive {
+          width: 70%;
+          padding: 5px 25px 5px 120px;
+        }
+        &.isAdmin {
+          padding: 5px 25px 5px 63px;
+        }
+
+        > div {
+          text-transform: uppercase;
+          color: #9e9ea7;
+          font-weight: 600;
+          text-align: center;
+          padding: 0 5px;
+          font-size: 0.95rem;
+        }
+
+        .cadence_name {
+          width: 300px;
+          text-align: left;
+        }
+
+        .steps {
+          width: 120px;
+          display: flex;
+          justify-content: center;
+          gap: 3px;
+
+          &.sorted {
+            color: $mainPurple;
+            cursor: pointer;
+          }
+
+          > .arrows {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            justify-content: center;
+
+            svg {
+              cursor: pointer;
+
+              &.downArrow {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+
+        .created_by {
+          width: 150px;
+        }
+        .type {
+          width: 150px;
+        }
+
+        .language {
+          width: 150px;
+        }
+
+        .actions {
+          width: 130px;
+        }
+      }
+
+      .body {
+        gap: 10px;
+        display: flex;
+        transition: 0.25s ease-in-out;
+        border-radius: 10px;
+
+        .cadencesContainer {
+          height: calc(100vh - 140px);
+          flex: 1;
+          overflow-y: scroll;
+          border-radius: 10px;
+          background-color: $white;
+          padding: 10px 10px;
+          display: flex;
+          flex-direction: column;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .sidebarContainer {
+          position: relative;
+          transition: 0.25s ease-in-out;
+        }
+
+        .noCadence {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          > div {
+            margin-top: 2rem;
+
+            > h4 {
+              color: $veryLightBlue;
+              font-size: 1.3rem;
+              font-weight: 700;
+              margin-bottom: 1rem;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

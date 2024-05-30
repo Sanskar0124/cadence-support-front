@@ -1,0 +1,50 @@
+@import '../../../../../../../../libs/themes/src/variables';
+
+.integration {
+  width: 100%;
+  background-color: $white;
+  border-radius: 20px;
+  padding: 16px 18px;
+  height: 293px;
+  // flex: 1;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      > h2 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 22px;
+        color: $lightBlue;
+      }
+    }
+
+    .right {
+      .tabs {
+        .tabBtns {
+          text-transform: capitalize;
+          color: #8193a8;
+          font-weight: 400;
+          font-size: 14px;
+          width: 121px !important;
+        }
+        .tabBtnActive {
+          font-weight: 500;
+          color: $mainPurple;
+        }
+        .activePill {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  > .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

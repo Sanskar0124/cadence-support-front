@@ -1,0 +1,16 @@
+.memberDetails {
+  height: calc(100vh - 140px);
+  display: flex;
+  gap: 10px;
+
+  .left {
+    flex: 0.32;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .right {
+    flex: 1;
+    height: 100%;
+  }
+}

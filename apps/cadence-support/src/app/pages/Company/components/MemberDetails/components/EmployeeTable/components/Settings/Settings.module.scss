@@ -1,0 +1,65 @@
+@import '../../../../../../../../../../../../libs/themes/src/variables';
+
+.settings {
+  width: 100%;
+  height: calc(100vh - 260px);
+  display: flex;
+  flex-direction: row;
+  .sidebar {
+    width: fit-content;
+    padding-left: 16px;
+    .tabs {
+      // width: 678px !important;
+      &:nth-child(1) {
+        padding-left: 0;
+      }
+      .tabBtns {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 10px;
+        color: #8193a8;
+        font-weight: 400;
+        z-index: 0 !important;
+      }
+      .tabBtnActive {
+        text-align: left;
+        font-weight: 600;
+        color: $black;
+        z-index: 0 !important;
+        background: $whiteShade1;
+        border-radius: 10px 0 0 10px;
+      }
+      .activePill {
+        display: none;
+      }
+    }
+  }
+  .component {
+    flex: 1;
+    height: 100%;
+    margin-left: 16px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+    .body {
+      padding-bottom: 230px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .divider {
+        position: relative;
+        width: 100%;
+        &::before {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: $grey;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../../../../../../libs/themes/src/variables';
+
+.disconnectedUsers {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  flex: 1;
+
+  position: relative;
+  bottom: 0;
+  overflow: hidden;
+  &_heading {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+
+    .text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      display: inline-block;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+
+      color: $lightBlue;
+    }
+    // .search {
+    //   width: 240px;
+    //   position: relative;
+    // }
+    .buttonLoader {
+      transform: translateX(-3px);
+      div {
+        border: 2px solid $veryLightBlue;
+        border-color: $veryLightBlue transparent transparent transparent;
+      }
+    }
+  }
+}

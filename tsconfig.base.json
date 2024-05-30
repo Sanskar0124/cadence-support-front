@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@cadence-support/atoms": ["libs/atoms/src/index.js"],
+      "@cadence-support/components": ["libs/components/src/index.js"],
+      "@cadence-support/constants": ["libs/constants/src/index.js"],
+      "@cadence-support/context": ["libs/context/src/index.js"],
+      "@cadence-support/data-access": ["libs/data-access/src/index.js"],
+      "@cadence-support/environments": ["libs/environments/src/index.js"],
+      "@cadence-support/icons": ["libs/icons/src/index.js"],
+      "@cadence-support/languages": ["libs/languages/src/index.js"],
+      "@cadence-support/themes": ["libs/themes/src/index.js"],
+      "@cadence-support/utils": ["libs/utils/src/index.js"],
+      "@cadence-support/widgets": ["libs/widgets/src/index.js"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

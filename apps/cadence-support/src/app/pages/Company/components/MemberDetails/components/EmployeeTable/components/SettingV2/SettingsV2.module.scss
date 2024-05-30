@@ -1,0 +1,154 @@
+@import '../../../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../../../mixins';
+
+.settings {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  height: calc(100vh - 280px);
+
+  .sidebar {
+    width: 20%;
+    padding-left: 16px;
+    background: #fdfdfd;
+    height: calc(100vh - 290px);
+    overflow-y: scroll;
+    @include screen-1366 {
+      width: 28%;
+    }
+    @include screen-1280 {
+      width: 28%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+
+    .maintab {
+      color: $lightBlue;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+
+      .activeTabs {
+        background: #f5f6f7;
+        border-radius: 10px 0px 0px 10px;
+        padding: 10px;
+        margin: 10px 0px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+      }
+      .tabs {
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+        cursor: pointer;
+      }
+
+      .subtab {
+        color: $veryLightBlue;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px;
+
+        cursor: pointer;
+      }
+      .subtabactive {
+        border-radius: 10px 0px 0px 10px;
+        background: #eff1f3;
+      }
+      .subtabBG {
+        border-radius: 10px 0px 0px 10px;
+        background: rgba(129, 147, 168, 0.06);
+        padding: 3px;
+      }
+      .myaccounttabs {
+        color: $veryLightBlue;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px 10px 10px 20px;
+        cursor: pointer;
+      }
+
+      .noinnerTab {
+        color: $black;
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0.9;
+        position: relative;
+        margin-top: 3px;
+
+        &::before {
+          content: '';
+          height: 26px;
+          width: 6px;
+          border-radius: 0px 4px 4px 0px;
+          background: $veryLightBlue;
+          position: absolute;
+          top: 6px;
+          left: 0px;
+        }
+      }
+      .active_subtab {
+        color: $black !important;
+        font-weight: 600 !important;
+        padding: 10px;
+
+        cursor: pointer;
+      }
+      .innerTab {
+        color: $black;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 15px 8px;
+        cursor: pointer;
+      }
+      .active_innertab {
+        color: $black;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 15px 8px;
+        opacity: 0.9;
+        position: relative;
+        &::before {
+          content: '';
+          height: 26px;
+          width: 6px;
+          border-radius: 0px 4px 4px 0px;
+          background: $veryLightBlue;
+          position: absolute;
+          top: -2px;
+          left: -17px;
+        }
+      }
+    }
+  }
+  .component {
+    height: 100%;
+    // height: calc(100vh - 230px);
+    width: 80%;
+    overflow-y: scroll;
+    @include screen-1366 {
+      width: 100%;
+    }
+    @include screen-1280 {
+      width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+  }
+}
+.placeholder {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+}

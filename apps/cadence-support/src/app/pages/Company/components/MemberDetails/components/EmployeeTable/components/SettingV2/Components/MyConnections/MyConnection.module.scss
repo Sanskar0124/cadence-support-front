@@ -1,0 +1,114 @@
+@import '../../../../../../../../../../../../../../libs/themes/src/variables';
+.myconnections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+
+  > div {
+    height: auto;
+    > h2 {
+      border-bottom: 1px solid #dde9eb;
+      margin-bottom: 28px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  .addonscontainer {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .cardcontainer {
+    height: 144px;
+    width: 201px;
+    border-radius: 15px;
+    border: 1px solid #f5f6f7;
+    background: #fff;
+    box-shadow: -2px 4px 20px 0px rgba(57, 71, 89, 0.04);
+    .integrationbg {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      height: 80px;
+      justify-content: flex-start;
+      border-radius: 15px 15px 0px 0px;
+      padding-left: 20px;
+      position: relative;
+
+      .details {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        .title {
+          text-align: center;
+          font-size: 14px;
+          font-weight: 700;
+        }
+        .subtitle {
+          margin-top: 5px;
+          color: $veryLightBlue;
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+      .version {
+        position: absolute;
+        color: $black;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: normal;
+        right: 6%;
+        top: 15%;
+      }
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      margin-top: 15px;
+      border-radius: 15px;
+      gap: 30px;
+      > div {
+        > p {
+          font-size: 10px;
+          font-weight: 400;
+          margin-top: 2px;
+        }
+      }
+    }
+    .statusWrapper {
+      .placeholder {
+        height: 20px;
+        width: 60px;
+        border-radius: 8px;
+      }
+
+      > span {
+        border-radius: 8px;
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        &.inUse {
+          color: $green;
+          background: linear-gradient(
+            315deg,
+            rgba(64, 224, 207, 0.16) 0%,
+            rgba(54, 205, 207, 0.16) 100%
+          );
+        }
+        &.notInUse {
+          color: $red;
+          background: linear-gradient(
+            315deg,
+            rgba(255, 136, 136, 0.16) 0%,
+            rgba(240, 95, 95, 0.16) 100%
+          );
+        }
+      }
+    }
+  }
+}

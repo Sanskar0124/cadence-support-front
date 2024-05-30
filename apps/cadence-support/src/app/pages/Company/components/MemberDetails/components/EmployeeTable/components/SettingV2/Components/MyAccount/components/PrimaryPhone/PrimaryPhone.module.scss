@@ -1,0 +1,73 @@
+@import '../../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.connectionsContainer {
+  .cHeading {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #dde9eb;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .cTitle {
+    color: $black;
+    font-weight: 600;
+    margin: 0.4rem 0px;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .cSubtitle {
+    color: $veryLightBlue;
+    font-weight: 400;
+    margin-bottom: 0.9rem;
+  }
+  .options {
+    margin-top: 1.2rem;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      border-radius: 20px;
+      background-color: #f5f6f7;
+      margin: 10px 0;
+      padding: 5px;
+      width: 60%;
+      @media screen and (max-width: 1100px) {
+        width: 100%;
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .input {
+        display: flex;
+        align-items: center;
+        .name {
+          line-height: 19px;
+          margin-left: 10px;
+          color: $black;
+        }
+      }
+      .buttons {
+        margin-right: 20px;
+        button {
+          font-size: 1rem;
+          font-weight: 400;
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+      &.active {
+        border: 1px solid #a282e8;
+      }
+    }
+  }
+}

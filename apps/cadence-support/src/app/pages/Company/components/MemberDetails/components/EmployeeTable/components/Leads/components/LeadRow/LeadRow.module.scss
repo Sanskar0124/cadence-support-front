@@ -1,0 +1,152 @@
+@import '../../../../../../../../../../../../../../libs/themes/src/variables';
+
+@mixin icon-background($borderRadius, $side) {
+  width: $side;
+  height: $side;
+  min-width: $side;
+  border-radius: $borderRadius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    106.52deg,
+    rgba(162, 130, 232, 0.1) -11.57%,
+    rgba(126, 142, 231, 0.1) 50.39%,
+    rgba(68, 153, 233, 0.1) 116.35%
+  );
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 60px 20.05% 58.53% 15.38%;
+  justify-items: start;
+  margin: 1rem auto;
+  .col {
+    padding: 10px 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    overflow: hidden;
+
+    &.leadID {
+      font-weight: 600;
+    }
+    &:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      > div {
+        &:first-child {
+          @include icon-background(14px, 40px);
+          > svg {
+            color: $mainGradientPurple;
+            height: 16px;
+            width: 14px;
+          }
+        }
+      }
+    }
+    &.stepsOverview {
+      display: flex;
+      gap: 1.4rem;
+      justify-content: start;
+      width: 600px;
+      .stepItem {
+        display: flex;
+        padding: 4px;
+        gap: 10px;
+        margin-left: 40px;
+        .left {
+          .icon {
+            position: relative;
+            @include icon-background(10px, 32px);
+            span.pausedIcon {
+              position: absolute;
+              bottom: -6px;
+              right: -6px;
+              .pause {
+                path {
+                  color: $orange;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          > div {
+            &:first-child {
+              color: $veryLightBlue;
+            }
+            &:nth-child(2) {
+              color: $lightBlue;
+            }
+          }
+        }
+      }
+      .extraItemCount {
+        @include icon-background(10px, 32px);
+        margin-left: 40px;
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: $lightBlue;
+      }
+    }
+
+    &.leadType {
+      align-self: center;
+      justify-self: center;
+      span {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.75rem;
+        padding: 8px 12px;
+        min-width: 80px;
+        text-align: center;
+        &.new {
+          background: linear-gradient(
+            315deg,
+            rgba(114, 187, 241, 0.12) 0%,
+            rgba(75, 144, 226, 0.12) 100%
+          );
+          color: $blue;
+        }
+        &.disqualified {
+          background: linear-gradient(
+            315deg,
+            rgba(255, 136, 136, 0.12) 0%,
+            rgba(240, 95, 95, 0.12) 100%
+          );
+          color: $red;
+        }
+        &.duplicated {
+          background: linear-gradient(
+            135deg,
+            rgba(255, 207, 79, 0.12) 0%,
+            rgba(255, 155, 74, 0.12) 100%
+          );
+          color: $orange;
+        }
+        &.trash {
+          background: rgba(109, 70, 107, 0.2);
+
+          color: #6d466b;
+        }
+        &.ongoing,
+        &.converted {
+          background: linear-gradient(
+            315deg,
+            rgba(64, 224, 207, 0.16) 0%,
+            rgba(54, 205, 207, 0.16) 100%
+          );
+          color: $ringover;
+        }
+      }
+    }
+  }
+}

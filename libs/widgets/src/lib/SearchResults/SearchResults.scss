@@ -1,0 +1,67 @@
+@import '../../../../themes/src/variables';
+
+.search {
+  background-color: $white;
+  display: none;
+  position: absolute;
+  top: 55px;
+  // max-height: 56.5vh;
+  // overflow-y: scroll;
+  width: 100%;
+  left: 0%;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(16, 23, 57, 0.3);
+  z-index: 100000;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.active {
+    display: block;
+  }
+  .no-results {
+    text-align: center;
+    padding: 2rem;
+    color: $black;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .error {
+    margin: 0 10px;
+  }
+  .companies {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 10px 10px;
+    width: 95%;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    width: 95%;
+    > h2 {
+      color: $lightBlue;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    > p {
+      color: $lightBlue;
+      font-size: 12px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+  .results {
+    margin-top: 5px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .loader {
+    height: 30px;
+    width: 100%;
+  }
+}

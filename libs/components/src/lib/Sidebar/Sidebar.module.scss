@@ -1,0 +1,83 @@
+@import '../../../../themes/src/variables';
+
+.sidebar {
+  background-color: $white;
+  width: 80px;
+  height: 100%;
+  padding: 22px 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .ringoverCall {
+      background: $ringoverGradient;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+
+    .nineDotsLogo {
+      cursor: pointer;
+    }
+
+    .logo {
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .profile {
+      position: relative;
+      cursor: pointer;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+      .dropdown {
+        z-index: 1000;
+        position: absolute;
+        left: 125%;
+        bottom: 0;
+        box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+        border-radius: 15px;
+        background: $white;
+        padding: 10px 5px;
+        width: 145px;
+        display: flex;
+        flex-direction: column;
+        button {
+          border: none;
+          background: none;
+          border-radius: 15px;
+          padding: 10px 15px;
+          text-align: left;
+          text-transform: capitalize;
+          &:hover {
+            background: #f0f8fe;
+          }
+          &:last-child {
+            color: $red;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .logout {
+      cursor: pointer;
+    }
+  }
+}

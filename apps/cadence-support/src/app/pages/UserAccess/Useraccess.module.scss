@@ -1,0 +1,99 @@
+@import '../../../../../../libs/themes/src/variables';
+@import '../mixins';
+
+.cadencePage {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .right {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .main {
+    background: $white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(231, 235, 255, 0.12);
+
+    .cadenceHeader {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 5px 5px 10px 10px;
+      transition: 0.25s ease-in-out;
+
+      > div {
+        text-transform: capitalize;
+        color: $veryLightBlue;
+        text-align: left;
+        padding: 0 5px;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+      .user_id {
+        width: 280px;
+      }
+      .name {
+        width: 220px;
+      }
+      .email_id {
+        width: 240px;
+      }
+      .role {
+        width: 150px;
+      }
+      .actions {
+        width: 140px;
+      }
+    }
+
+    .body {
+      gap: 10px;
+      display: flex;
+      transition: 0.25s ease-in-out;
+      border-radius: 10px;
+
+      .cadencesContainer {
+        height: calc(100vh - 170px);
+        flex: 1;
+        overflow-y: scroll;
+        border-radius: 10px;
+        background-color: $white;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: column;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      .noCadence {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+          margin-top: 2rem;
+
+          > h4 {
+            color: $veryLightBlue;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

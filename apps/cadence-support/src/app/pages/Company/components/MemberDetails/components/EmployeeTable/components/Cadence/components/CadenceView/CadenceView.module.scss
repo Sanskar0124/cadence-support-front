@@ -1,0 +1,47 @@
+@import '../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.container {
+  overflow: hidden;
+  overflow: hidden;
+  .header {
+    padding: 2px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      h4 {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+    .right {
+      .buttonSliderClassName {
+        background: linear-gradient(
+          106.52deg,
+          rgba(162, 130, 232, 0.1) -11.57%,
+          rgba(126, 142, 231, 0.1) 50.39%,
+          rgba(68, 153, 233, 0.1) 116.35%
+        );
+        border: 1px solid #e7ebff;
+        border-radius: 15px;
+      }
+      .buttonClassName {
+        color: $lightBlue;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .activeBtnClassName {
+        color: $mainPurple;
+        background: $white !important;
+        border-radius: 10px;
+      }
+      .activePillClassName {
+        background: $white !important;
+        border-radius: 10px;
+      }
+    }
+  }
+}

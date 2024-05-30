@@ -1,0 +1,37 @@
+@import '../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.WorkingDaysSettings {
+  margin: 0 40px;
+
+  h1 {
+    color: $black;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  h2 {
+    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  h3 {
+    color: $lightBlue;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .days {
+    padding: 15px 20px;
+    min-width: 196px;
+    max-width: fit-content;
+    margin-top: 10px;
+    background: $white;
+    border: 1px solid #dadce0;
+    border-radius: 15px;
+    span {
+      color: $black;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+}

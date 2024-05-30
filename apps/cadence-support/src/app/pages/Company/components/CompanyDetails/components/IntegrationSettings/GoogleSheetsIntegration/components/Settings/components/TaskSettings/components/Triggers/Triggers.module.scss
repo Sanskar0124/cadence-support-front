@@ -1,0 +1,59 @@
+@import '../../../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.collapsibleContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+
+  .header {
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+
+  .TriggerSetting {
+    border-radius: 10px;
+    padding: 15px 20px;
+    .setting {
+      margin-bottom: 20px;
+      .title {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .pauseTime {
+        display: flex;
+        gap: 60px;
+        margin-top: 10px;
+        .pauseTimer {
+          padding: 15px 20px;
+        }
+        .timer {
+          padding: 15px 20px;
+          min-width: 325px;
+        }
+      }
+      .inputDisplay {
+        background: $white;
+        border: 1px solid #dadce0;
+        border-radius: 15px;
+        width: fit-content;
+      }
+      .triggerStatus {
+        padding: 15px 20px;
+        min-width: 436px;
+      }
+      .then {
+        display: flex;
+        gap: 7px;
+      }
+    }
+  }
+}

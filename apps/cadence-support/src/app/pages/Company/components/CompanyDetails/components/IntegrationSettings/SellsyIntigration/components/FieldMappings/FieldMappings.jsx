@@ -1,0 +1,61 @@
+import { useState } from 'react';
+import styles from './FieldMappings.module.scss';
+import { useFieldMappings } from '@cadence-support/data-access';
+import { SearchBar, Select } from '@cadence-support/widgets';
+import CustomObjects from './components/CustomObjects/CustomObjects';
+import moment from 'moment';
+import Company from './components/Company/Company';
+import Contact from './components/Contact/Contact';
+
+function FieldMappings({ companyID }) {
+  const [view, setView] = useState('contact');
+  const setSelect = (e) => {
+    setView(e);
+  };
+  const { fieldMappings, isFieldMappingsLoading } = useFieldMappings(companyID);
+  const updatedOn = moment(fieldMappings?.updated_at).format('DD MMM YYYY');
+  const PAGE = {
+    contact: <Contact companyID={companyID} />,
+    company: <Company companyID={companyID} />,
+    objects: <CustomObjects companyID={companyID} />,
+  };
+  return (
+    <>
+      {isFieldMappingsLoading ? (
+        <div className={styles.linePlaceholders}>
+          {[...Array(4).keys()].map((key) => (
+            <Skeleton className={styles.linePlaceholder} />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.fieldMappings}>
+          <div className={styles.header}>
+            <SearchBar
+              disabled
+              width={250}
+              height={44}
+              placeholderText="Search"
+            />
+            <div className="">
+              <h3>Last updated on {updatedOn} </h3>
+              <Select
+                width={174}
+                value={view}
+                setValue={(e) => setSelect(e)}
+                options={{
+                  contact: 'Contact',
+                  company: 'Company',
+                  objects: 'Custom Objects',
+                }}
+                numberOfOptionsVisible="4"
+              />
+            </div>
+          </div>{' '}
+          <div className="">{PAGE[view]}</div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default FieldMappings;

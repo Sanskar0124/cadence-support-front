@@ -1,0 +1,21 @@
+.mainContainer {
+  .header {
+    margin-top: 20px;
+    .heading {
+      width: 9rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    margin-top: 2.5rem;
+    .task {
+      width: 30rem;
+      height: 26px;
+    }
+  }
+}

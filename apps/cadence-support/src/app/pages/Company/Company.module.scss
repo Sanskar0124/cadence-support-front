@@ -1,0 +1,141 @@
+@import '../../../../../../libs/themes/src/variables';
+@import '../mixins';
+
+.tasks {
+  max-width: 100%;
+  overflow: hidden;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    & > div {
+      display: flex;
+      align-items: center;
+
+      .title {
+        color: $lightBlue;
+        text-transform: capitalize;
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 20px;
+      .search {
+        width: 350px;
+        position: relative;
+      }
+      .btnFilter {
+        border-radius: 15px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        > svg {
+          height: 20px !important;
+          width: 20px !important;
+        }
+      }
+    }
+
+    .divider {
+      position: relative;
+      height: 45px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        content: '';
+        height: 100%;
+        width: 1px;
+        background: $primaryGradient;
+      }
+    }
+    .calendarBtn {
+      padding: 0 !important;
+    }
+    .addNewCompanyBtn {
+      margin-left: 20px;
+
+      > div {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $black;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    .companyListContainer {
+      min-height: calc(100vh - 110px);
+      overflow: scroll;
+      height: calc(100vh - 110px);
+      background-color: $white;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 0.5fr));
+      row-gap: 1rem;
+      column-gap: 1rem;
+      border-radius: 10px;
+      padding: 1rem;
+      grid-auto-rows: 154px;
+      flex-grow: 1;
+
+      @include screen-1366 {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 0.5fr));
+      }
+
+      @include screen-1280 {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 0.5fr));
+      }
+
+      @include screen-1024 {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 0.5fr));
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    }
+    .filters {
+      width: 30%;
+      height: 100%;
+    }
+    .noTasks {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        color: $veryLightBlue;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+    }
+
+    .noCompanies {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      h4 {
+        color: $veryLightBlue;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

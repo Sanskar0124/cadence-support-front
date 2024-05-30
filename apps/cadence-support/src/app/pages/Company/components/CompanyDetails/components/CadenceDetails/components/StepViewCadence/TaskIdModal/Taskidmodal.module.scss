@@ -1,0 +1,52 @@
+@import '../../../../../../../../../../../../../libs/themes/src/variables';
+
+.Taskdetailsmodal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  width: 45%;
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+  }
+
+  .idcontainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 97%;
+    padding: 10px;
+    margin-top: 3.2rem;
+    height: calc(100vh - 400px);
+    overflow-y: scroll;
+    align-content: flex-start;
+
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+
+    .taskid {
+      color: $mainPurple;
+      background: $primaryGradientLight;
+      padding: 7px;
+      border-radius: 5px;
+    }
+    .message {
+      margin: 5rem;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      color: $lightBlue;
+      font-size: 16px;
+    }
+  }
+}

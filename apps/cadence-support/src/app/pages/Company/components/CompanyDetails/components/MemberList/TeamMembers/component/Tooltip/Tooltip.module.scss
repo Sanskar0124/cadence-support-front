@@ -1,0 +1,39 @@
+@import '../../../../../../../../../../../../../libs/themes/src/variables';
+
+.tooltip_container {
+  position: relative;
+  cursor: pointer;
+
+  .tooltipcard {
+    min-width: 300px;
+    max-width: 372px;
+    height: auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 11px;
+    gap: 10px;
+    background: #ffffff;
+    box-shadow: 5px 10px 50px rgba(41, 43, 88, 0.2);
+    border-radius: 15px;
+    position: absolute;
+    z-index: 13;
+
+    &_title {
+      display: flex;
+      align-items: center;
+      > svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &_content {
+      width: 100%;
+    }
+
+    &.bottom {
+      top: 30px;
+      //   right: -20px;
+    }
+  }
+}

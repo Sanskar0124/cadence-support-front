@@ -1,0 +1,24 @@
+@import '../../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.connectionsContainer {
+  .cHeading {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #dde9eb;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  .timezone {
+    > div > div {
+      width: 485px;
+      height: 44px;
+      svg {
+        display: none;
+      }
+    }
+  }
+}

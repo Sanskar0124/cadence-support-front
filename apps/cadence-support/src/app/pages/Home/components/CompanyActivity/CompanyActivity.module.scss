@@ -1,0 +1,63 @@
+@import '../../../../../../../../libs/themes/src/variables';
+.feed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  flex: 1;
+
+  position: relative;
+  bottom: 0;
+  overflow: hidden;
+  &_heading {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+
+    .text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      display: inline-block;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+
+      color: $lightBlue;
+    }
+    .search {
+      width: 240px;
+      position: relative;
+    }
+  }
+
+  .CompanyActivities {
+    padding: 1.3rem 0.8rem 0 0;
+    max-height: 78vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+
+    .noActivity {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px;
+      h4 {
+        color: $veryLightBlue;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+    }
+  }
+}

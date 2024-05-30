@@ -1,0 +1,423 @@
+@import '../../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../../mixins';
+
+// $grid-default: 0.026fr 0.1fr 0.28fr 0.20fr 0.12fr 0.132fr 0.119fr;
+$grid-default: 20% 20% 21% 8% 11.5% 9% 13%;
+$grid-1024: 120px 30% 24% 11% 12% 14% 14%;
+$grid-1280: 180px 20% 21% 9% 12% 9% 13%;
+
+.membersList {
+  width: 100%;
+
+  height: calc(100vh - 280px);
+  &::-webkit-scrollbar {
+    display: none;
+
+    scrollbar-width: none;
+  }
+  border-radius: 15px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  background: $white;
+  .header {
+    background: white;
+    width: 100%;
+    position: sticky;
+
+    top: 0;
+    z-index: 5;
+
+    .row {
+      display: grid;
+      grid-template-columns: $grid-default;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $veryLightBlue;
+      background: rgba(245, 246, 247, 0.48);
+      border-radius: 10px;
+      width: 100%;
+
+      @include screen-1024 {
+        grid-template-columns: $grid-1024;
+        font-size: 0.6rem;
+      }
+      @include screen-1280 {
+        grid-template-columns: $grid-1280;
+        font-size: 0.6rem;
+      }
+
+      .col {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 10px;
+        &:first-child {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 15px;
+          // padding: 0.4rem 10px;
+        }
+      }
+    }
+  }
+
+  .body {
+    width: 100%;
+
+    height: calc(100vh - 300px);
+    padding-top: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $black;
+
+    .row {
+      display: grid;
+      grid-template-columns: $grid-default;
+      font-size: 0.75rem;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+      padding: 10px 0;
+      &:hover,
+      &.active {
+        background-color: #f0f8fe;
+        border-radius: 20px;
+      }
+
+      @include screen-1024 {
+        grid-template-columns: $grid-1024;
+        font-size: 0.6rem;
+      }
+
+      @include screen-1280 {
+        grid-template-columns: $grid-1280;
+        font-size: 0.6rem;
+      }
+
+      .col {
+        padding: 0.4rem 10px;
+        align-items: center;
+        display: flex;
+
+        &:first-child {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        &:nth-child(2) {
+          > span {
+            font-weight: 600;
+          }
+        }
+        &.userID {
+          white-space: nowrap;
+          max-width: 270px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        &.memberRole {
+          text-transform: capitalize;
+        }
+        &.status {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: flex-start;
+          > span {
+            display: block;
+            width: 110px;
+            max-width: 120px;
+            height: 26px;
+            padding: 5px;
+            gap: 4px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &::first-letter {
+              text-transform: capitalize;
+            }
+          }
+          .configured {
+            background: $greenTagBackground;
+            color: $ringover;
+          }
+
+          .notconfigured {
+            background: $redTagBackground;
+            color: $red;
+          }
+          .mailsent {
+            background: $blueTagBackground;
+            color: $blue;
+          }
+          .common {
+            color: #a282e8;
+            background: rgba(79, 37, 169, 0.09);
+          }
+        }
+
+        &.salesforceID {
+          @include screen-1024 {
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          @include screen-1280 {
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        &.addon {
+          max-width: 80px;
+          margin-left: 0rem;
+          display: flex;
+          gap: 1px;
+          position: relative;
+
+          .firstIcon {
+            // position: relative;
+          }
+          .secondIcon {
+            position: absolute;
+            right: 30.2%;
+            @include screen-1280 {
+              right: 35.5%;
+            }
+          }
+
+          > div > img {
+            height: 28px;
+            width: 28px;
+          }
+          > div > svg {
+            border-radius: 50%;
+          }
+          > span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            background: #eaebec;
+            border-radius: 50%;
+            flex-shrink: 0;
+            font-size: 10px;
+            font-weight: 600;
+            position: absolute;
+            right: 15%;
+
+            @include screen-1280 {
+              right: 20%;
+            }
+          }
+        }
+        &.emailID {
+          overflow: hidden;
+          max-width: 300px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          @include screen-1280 {
+            max-width: 210px;
+          }
+          @include screen-1024 {
+            max-width: 180px;
+          }
+        }
+        &.userID {
+          @include screen-1024 {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          @include screen-1280 {
+            max-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        &.name {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            > span {
+              position: relative;
+              > span {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                bottom: 0;
+                right: 0;
+                outline: 2px solid $white;
+
+                &.statusRed {
+                  background: linear-gradient(315deg, #ff8888 0%, #f05f5f 100%);
+                }
+
+                &.statusGreen {
+                  background: $ringoverGradient;
+                }
+              }
+            }
+          }
+
+          .accounts {
+            display: flex;
+            gap: 10px;
+            position: relative;
+            > div {
+              width: 28px;
+              height: 28px;
+              position: relative;
+              .icon {
+                width: 100%;
+                height: 100%;
+                &.Disabled {
+                  color: $grey;
+                }
+              }
+              .googleIcon {
+                color: #4285f4;
+              }
+
+              .salesforceIcon {
+                color: #00a1e0;
+              }
+
+              .hubspotIcon {
+                color: #ff7a59;
+              }
+              .sellsyIcon {
+                color: '#010061';
+              }
+
+              svg.minusRedGradient {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                bottom: -1px;
+                right: -2px;
+                z-index: 4;
+                color: $red;
+              }
+            }
+          }
+          .tooltip {
+            position: absolute;
+            display: inline-flex;
+            // height: 60px;
+            width: max-content;
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            gap: 5px;
+            background: #fff;
+            box-shadow: 5px 10px 10px 0px rgba(41, 43, 88, 0.2);
+            top: 30px;
+            left: 30px;
+            z-index: 100;
+            > p {
+              width: 100%;
+              color: $black;
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .memberProfilePicture {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .placeholder {
+          width: 100%;
+          height: 30px;
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &.members {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          padding-right: 1.5rem;
+
+          display: flex;
+          gap: 1.4rem;
+          .lengthInfo {
+            flex: 1.8 1 auto;
+          }
+
+          .imageBox {
+            padding: 10px;
+            display: flex;
+            flex: 4 2 auto;
+            align-items: center;
+
+            .image {
+              width: 28px;
+              height: 28px;
+              object-fit: cover;
+              margin: 0 -4.2px;
+              border-radius: 50%;
+              border: 2px solid #f2f6fd;
+            }
+
+            .numberCircle {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 28px;
+              height: 28px;
+              margin: 0 -5px;
+              font-size: 10px;
+              font-weight: 600;
+              color: $mainPurple;
+              background: #f2f6fd;
+              border-radius: 50%;
+              border: 1.5px solid $mainPurple;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+
+    .noMembers {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h4 {
+        color: $veryLightBlue;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

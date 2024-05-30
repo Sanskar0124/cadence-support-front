@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 20px 0;
+  .task {
+    width: 250px;
+    height: 165px;
+    border-radius: 20px;
+    margin: 10px 0;
+  }
+}

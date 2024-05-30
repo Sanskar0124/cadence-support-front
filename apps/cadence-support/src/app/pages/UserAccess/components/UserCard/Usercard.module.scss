@@ -1,0 +1,82 @@
+@import '../../../mixins';
+@import '../../../../../../../../libs/themes/src/variables';
+
+@mixin display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cadenceCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+  padding-left: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 6px;
+
+  > div {
+    color: $black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  // NAME
+  .user_id {
+    width: 280px;
+  }
+  .username {
+    @include display-flex();
+    gap: 20px;
+    img {
+      height: 37px;
+      width: 37px;
+      border-radius: 50%;
+    }
+    > span {
+      width: 150px;
+    }
+  }
+  .email {
+    width: 230px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .role {
+    width: 130px;
+    padding-left: 10px;
+  }
+
+  .actions {
+    width: 140px;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+
+      .dropdownBtn {
+        text-transform: capitalize;
+        height: 50px;
+        margin-bottom: 5px;
+      }
+      .dropdownActive {
+        text-transform: capitalize;
+        height: 50px;
+        margin-bottom: 4px;
+        color: $white;
+        background: $primaryGradient;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

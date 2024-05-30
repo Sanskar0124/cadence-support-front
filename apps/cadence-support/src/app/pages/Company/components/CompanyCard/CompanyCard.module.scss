@@ -1,0 +1,217 @@
+@import '../../../../../../../../libs/themes/src/variables';
+@import '../../../mixins';
+
+.companyCard {
+  background: #ffffff;
+  border: 1px solid rgba(218, 220, 224, 0.24);
+  box-shadow: 0px 2px 20px rgba(41, 43, 88, 0.03);
+  border-radius: 10px;
+  padding: 1.4rem;
+  width: 100%;
+
+  cursor: pointer;
+
+  .header {
+    display: grid;
+    grid-template-columns: 0.9fr 0.1fr;
+    justify-content: space-between;
+    .companyProps {
+      display: flex;
+      gap: 1.2rem;
+
+      .companyImageLogoWrapper {
+        .companyImageLogo {
+          border-radius: 8px;
+          height: 36px;
+          width: 36px;
+        }
+        .loading {
+          height: 40px;
+          width: 40px;
+          border-radius: 8px;
+        }
+      }
+
+      .companyInfo {
+        width: max-content;
+        @include screen-1280 {
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .companyNameInfo {
+          display: flex;
+          align-items: center;
+
+          .companyName {
+            color: $black;
+            font-size: 1.2rem;
+            line-height: 22px;
+            font-weight: 700;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 250px;
+          }
+          .licensesInfo {
+            color: $black;
+            font-size: 1.2rem;
+            line-height: 22px;
+            font-weight: 400;
+            margin-left: 5px;
+          }
+        }
+        .companyExtraDetails {
+          color: $veryLightBlue;
+          font-size: 12px;
+        }
+        .loading {
+          width: 300px;
+          height: 36px;
+        }
+      }
+    }
+
+    .integrations {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+      .hubspotIcon {
+        border-radius: 50%;
+      }
+      .pipedriveIcon {
+        border-radius: 50%;
+      }
+      .salesforceIcon {
+        border-radius: 50%;
+        color: #00a1e0;
+      }
+      .bullhornIcon {
+      }
+      .sellsyIcon {
+      }
+      .zohoIcon {
+      }
+    }
+
+    .imageBox {
+      display: flex;
+      align-items: center;
+
+      .image {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        outline: 2px solid #f2f6fd;
+      }
+
+      .numberCircle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        margin: 0 -4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $mainPurple;
+        background: #f2f6fd;
+        border-radius: 50%;
+        border: 1.5px solid $mainPurple;
+        z-index: 2;
+      }
+    }
+  }
+
+  .footer {
+    &.loading {
+      height: 100px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    .left {
+      p {
+        display: flex;
+        padding: 8px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 10px;
+        width: fit-content;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+      }
+      .configured {
+        background: $greenTagBackground;
+        color: $ringover;
+      }
+      .pending {
+        background: $yellowTagBackground;
+        color: $orange;
+      }
+      .notconfigured {
+        background: $redTagBackground;
+        color: $red;
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 1rem;
+
+      color: $lightBlue;
+      padding-right: 1.4rem;
+
+      .divider {
+        width: 1px;
+        color: $grey;
+        margin: 0 !important;
+        height: 40px;
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > h3 {
+          font-size: 1rem;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+.companyCardUnOnboarded {
+  composes: companyCard;
+  background-color: #fafafa;
+}
+
+.unonboardedAdmin {
+  font-style: oblique;
+  font-weight: 500;
+}
+
+// @media screen and (min-width:1910px)  {
+//   .companyCard {
+//     min-width: 440px;
+//   }
+// }
+
+// @media screen and (min-width:1600px) and (max-width: 1920px)  {
+//   .companyCard {
+//     min-width: 448px;
+//   }
+// }

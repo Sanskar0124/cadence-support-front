@@ -1,0 +1,34 @@
+@import '../../../../themes/src/variables';
+
+.radio {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  .checkmark {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    background: $white;
+    color: $white;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  input {
+    display: none;
+
+    &:checked ~ .checkmark {
+      background: $primaryGradient;
+      i {
+        display: block;
+      }
+    }
+
+    &:disabled ~ .checkmark {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

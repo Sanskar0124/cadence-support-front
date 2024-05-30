@@ -1,0 +1,36 @@
+@import '../../../../themes/src/variables';
+
+.taskStack {
+  width: 100%;
+  max-width: 1055px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.1rem;
+  .task {
+    display: flex;
+    gap: 0.6rem;
+    background-color: $whiteShade1;
+    padding: 0.8rem 0.8rem;
+    border-radius: 5px;
+    align-items: center;
+    .taskCheckBox {
+      flex: 0.15;
+      transform: translate(0, -10px);
+    }
+    .taskIcon {
+      display: flex;
+      align-items: center;
+      color: $lightBlue;
+    }
+    .taskName {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: $black;
+    }
+  }
+}

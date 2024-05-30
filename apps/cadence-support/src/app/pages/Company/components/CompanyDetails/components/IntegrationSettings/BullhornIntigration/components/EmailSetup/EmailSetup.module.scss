@@ -1,0 +1,47 @@
+@import '../../../../../../../../../../../../../libs/themes/src/variables';
+.emailSetupContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  gap: 5px;
+  margin: 30px 0px;
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rowTitle {
+    background: #fafbfc;
+    padding: 39px 23.33px;
+    border-radius: 10px 0px 0px 10px;
+    h1 {
+      color: $lightBlue;
+    }
+  }
+  .rowValue {
+    background: #fdfdfd;
+    color: $lightBlue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px 0px 40px;
+    .integrationStatus {
+      display: flex;
+      align-items: center;
+      h2 {
+        margin-left: 20px;
+      }
+    }
+    .integrationStatusOutlook {
+      display: flex;
+      align-items: center;
+      h2 {
+        margin-left: 20px;
+        margin-top: 7px;
+      }
+    }
+  }
+  h2 {
+    color: $black;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}

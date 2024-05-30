@@ -1,0 +1,360 @@
+@import '../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.TaskSettings {
+  margin: 0 40px;
+  h1 {
+    color: $black;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+  h2 {
+    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  h3 {
+    color: $lightBlue;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .inputDisplay {
+    background: $white;
+    border: 1px solid #dadce0;
+    border-radius: 15px;
+    width: fit-content;
+  }
+  .displayReasons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 15px;
+    gap: 30px;
+    width: 300px;
+    background: #f5f6f7;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    overflow-wrap: break-word;
+    margin: 20px 0;
+  }
+  .maxTasks {
+    margin: 10px 0 30px 0;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  .lateTasks {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c0cccd;
+    gap: 28px 88px;
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    div {
+      display: flex;
+      align-items: center;
+    }
+    .lateTask {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 412px;
+      h2 {
+        margin-left: 7px;
+        font-weight: 400;
+        font-size: 12px;
+        color: $black;
+      }
+      .lateTaskTime {
+        padding: 10px 38px;
+      }
+    }
+  }
+
+  .skipTask {
+    margin-top: 20px;
+    border-bottom: 1px solid #c0cccd;
+
+    .skipTasks {
+      margin-top: 20px;
+      padding-bottom: 30px;
+
+      @media screen and (min-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .exceptions {
+      display: flex;
+      flex-direction: column;
+
+      .collapsibleContainer {
+        width: 100%;
+        position: relative;
+        margin-bottom: 1rem;
+
+        .header {
+          width: 95%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            text-transform: capitalize;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .statuses {
+        h2 {
+          margin: 10px 0 5px 5px;
+        }
+        .when {
+          margin: 10px 10px;
+        }
+        .triggerStatus {
+          padding: 15px 20px;
+          min-width: 436px;
+        }
+      }
+
+      .others {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 15px;
+        gap: 40px;
+        width: 400px;
+        background: #f5f6f7;
+        border-radius: 10px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        overflow-wrap: break-word;
+        .icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          > svg {
+            cursor: pointer;
+          }
+        }
+        .singleText {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+
+          .text {
+            max-width: 80%;
+            overflow-wrap: break-word;
+            margin-left: 15px;
+          }
+        }
+        > div {
+          overflow-wrap: break-word;
+
+          > svg {
+            cursor: pointer;
+          }
+        }
+      }
+      .task {
+        background-color: $whiteShade1;
+      }
+    }
+    .exceptions {
+      display: flex;
+      flex-direction: column;
+
+      .collapsibleContainer {
+        width: 100%;
+        position: relative;
+        margin-bottom: 1rem;
+
+        .header {
+          width: 95%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .title {
+            text-transform: capitalize;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .statuses {
+        h2 {
+          margin: 10px 0 5px 5px;
+        }
+        .when {
+          margin: 10px 10px;
+        }
+        .triggerStatus {
+          padding: 15px 20px;
+          min-width: 436px;
+        }
+      }
+
+      .others {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 15px;
+        gap: 40px;
+        width: 400px;
+        background: #f5f6f7;
+        border-radius: 10px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        overflow-wrap: break-word;
+        .icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          > svg {
+            cursor: pointer;
+          }
+        }
+        .singleText {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+
+          .text {
+            max-width: 80%;
+            overflow-wrap: break-word;
+            margin-left: 15px;
+          }
+        }
+        > div {
+          overflow-wrap: break-word;
+
+          > svg {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .stopCadences {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c0cccd;
+    .cards {
+      display: grid;
+      gap: 8px;
+      padding-top: 15px;
+      grid-template-columns: 1fr 362px 1fr;
+      .card {
+        background-color: $whiteShade1;
+        border-radius: 10px;
+        padding: 13px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .workflow {
+    margin-top: 40px;
+    border-bottom: 1px solid #c0cccd;
+    .triggers {
+      margin: 40px 0;
+      h2 {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .trigger {
+        margin-bottom: 10px;
+        background-color: $whiteShade2;
+        border-radius: 10px;
+        padding: 20px;
+
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          div {
+            display: flex;
+            align-items: center;
+            svg {
+              margin: 0 10px;
+            }
+            label {
+              margin: 0 10px;
+            }
+          }
+        }
+        .statuses {
+          h2 {
+            margin: 10px 0 5px 5px;
+          }
+          .when {
+            margin: 19px 0;
+          }
+          .triggerStatus {
+            padding: 15px 20px;
+            min-width: 436px;
+          }
+        }
+      }
+    }
+  }
+
+  .advanceWorkflow {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #c0cccd;
+
+    .customWebhook {
+      margin-top: 10px;
+      .webhookDisplay {
+        // padding: 13px 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+  .webhook {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 20px;
+
+    .customWebhook {
+      margin-top: 10px;
+      .webhookDisplay {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

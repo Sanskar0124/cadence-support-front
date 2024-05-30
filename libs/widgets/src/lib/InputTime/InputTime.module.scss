@@ -1,0 +1,33 @@
+@import '../../../../themes/src/variables';
+
+.inputTime {
+  width: 100%;
+
+  .inputFields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+
+    input {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .colon {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      color: $black;
+    }
+
+    .a {
+      .tabNav {
+        height: 40px;
+        // .tabNavBtn {
+        // 	padding: 0.5rem 1rem;
+        // }
+      }
+    }
+  }
+}

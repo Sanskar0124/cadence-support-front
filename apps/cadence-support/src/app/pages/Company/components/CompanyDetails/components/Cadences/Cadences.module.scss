@@ -1,0 +1,119 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../mixins';
+
+$grid-default: 36% 24% 15% 10% 15%;
+
+.cadences {
+  width: 100%;
+  height: calc(100vh - 205px);
+  border-radius: 15px;
+  padding: 18px 10px;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px;
+    }
+    .tabs {
+      .buttonSliderClassName {
+        background: linear-gradient(
+          106.52deg,
+          rgba(162, 130, 232, 0.1) -11.57%,
+          rgba(126, 142, 231, 0.1) 50.39%,
+          rgba(68, 153, 233, 0.1) 116.35%
+        );
+        border: 1px solid #e7ebff;
+        border-radius: 15px;
+      }
+      .buttonClassName {
+        color: $lightBlue;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .activeBtnClassName {
+        color: $mainPurple;
+        background: $white !important;
+        border-radius: 10px;
+      }
+      .activePillClassName {
+        background: $white !important;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .filter {
+    margin-left: 1.2rem;
+    padding: 10px 20px;
+  }
+}
+
+.table {
+  margin-top: 28px;
+  .tableHead {
+    background: rgba(245, 246, 247, 0.48);
+    border-radius: 10px 10px 0px 0px;
+    display: grid;
+    grid-template-columns: 2.5fr 2.2fr 0.8fr 1fr 1fr;
+    h1 {
+      color: $veryLightBlue;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 13px 0;
+      text-align: center;
+      &:first-child {
+        text-align: start;
+        padding-left: 24px;
+      }
+    }
+  }
+  .tableRows {
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 347px);
+    padding-top: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    .placeholder {
+      display: grid;
+      grid-template-columns: $grid-default;
+    }
+
+    .noCadence {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > div {
+        margin-top: 2rem;
+
+        > h4 {
+          color: $veryLightBlue;
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../../../../../../../../../../libs/themes/src/variables';
+
+.salesforceIntegration {
+  width: 100%;
+  display: flex;
+  border-radius: 15px;
+  padding: 0px 20px 0px 0px;
+  background: $white;
+
+  gap: 20px;
+  border: 1px solid rgba(231, 235, 255, 0.12);
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  h3 {
+    color: $veryLightBlue;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 205px);
+    overflow-y: scroll;
+    width: 18%;
+    background: rgba(245, 246, 247, 0.24);
+    padding: 10px;
+    padding-right: 0px !important;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+  }
+  .title {
+    color: $veryLightBlue;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 20px 0px 20px 20px;
+
+    cursor: pointer;
+  }
+  .active {
+    font-weight: 600;
+    color: $black;
+  }
+  .settings {
+    border-radius: 10px 0px 0px 10px;
+    background-color: #f6f7f8;
+  }
+  .subtab {
+    color: $veryLightBlue;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px;
+    margin-top: 7px;
+  }
+  .subtabactive {
+    border-radius: 10px 0px 0px 10px;
+    background: #eff1f3;
+  }
+  .active_subtab {
+    color: $black !important;
+    font-weight: 700 !important;
+    padding: 10px;
+    margin-top: 7px;
+  }
+  .innerTab {
+    color: $black;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 15px 8px;
+    cursor: pointer;
+  }
+  .active_innertab {
+    color: $black;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 8px;
+    opacity: 0.9;
+    position: relative;
+    &::before {
+      content: '';
+      height: 26px;
+      width: 6px;
+      border-radius: 0px 4px 4px 0px;
+      background: $lightBlue;
+      position: absolute;
+      top: -2px;
+      left: -17px;
+    }
+  }
+
+  .tabPage {
+    height: calc(100vh - 205px);
+    flex-grow: 1;
+    width: 90%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+  }
+}

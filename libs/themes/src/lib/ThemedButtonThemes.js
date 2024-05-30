@@ -1,0 +1,11 @@
+export default {
+  TRANSPARENT: 'TRANSPARENT',
+  PRIMARY: 'PRIMARY',
+  SECONDARY: 'SECONDARY',
+  RED: 'RED',
+  GREY: 'GREY',
+  WHITE: 'WHITE',
+  ACTIVE: 'ACTIVE',
+  GREEN: 'GREEN',
+  ICON: 'ICON',
+};

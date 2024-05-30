@@ -1,0 +1,50 @@
+@import '../../../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../../../mixins';
+
+.cadencePeople {
+  overflow: hidden;
+  background: $white;
+  border-radius: 15px;
+  margin-top: 1rem;
+  padding: 10px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .leadsContainer {
+    margin-top: 1rem;
+    overflow: scroll;
+    height: calc(100vh - 320px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 0.5fr));
+    @include screen-1024 {
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    }
+    align-content: flex-start;
+    gap: 0.85rem;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+
+    .noLeads {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 22rem;
+      padding-top: 104px;
+      h4 {
+        color: $veryLightBlue;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

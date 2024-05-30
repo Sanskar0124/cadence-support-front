@@ -1,0 +1,34 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../mixins';
+
+.resendmailcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px 20px 20px !important;
+  .details {
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 360px;
+    height: 134px;
+    .title {
+      color: $black;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+    .message {
+      color: $black;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      line-height: 18px;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import '../../../../../../../../../libs/themes/src/variables';
+
+.integrationType {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  overflow: scroll;
+  max-width: 630px;
+  padding: 7px 0px;
+  &::-webkit-scrollbar {
+    height: 7px;
+    // display: none;
+    // -ms-overflow-style: none; /* IE and Edge */
+    // scrollbar-width: none; /* Firefox */
+  }
+  .companyContainer {
+    width: 200px;
+    height: 195px;
+    box-shadow: 5px 7px 24px rgba(57, 71, 89, 0.04);
+    border-radius: 20px;
+    margin: 10px 0;
+
+    .head {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      gap: 10px;
+      background-color: $white;
+
+      .logo {
+        > svg {
+          height: 36px;
+          width: 36px;
+          border-radius: 10px;
+        }
+      }
+      > div {
+        > p {
+          &:first-child {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            &::first-letter {
+              text-transform: capitalize;
+            }
+          }
+          &:last-child {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: $veryLightBlue;
+          }
+        }
+      }
+
+      .bounced {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 17px 7px 17px;
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+
+    .companyDetails {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .categories {
+        padding: 20px;
+        text-align: center;
+        > p {
+          color: $white;
+          &:first-child {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+            &::first-letter {
+              text-transform: capitalize;
+            }
+          }
+          &:last-child {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      .companyStatusBtn {
+        padding: 5px 6px;
+        background: rgba(255, 255, 255, 0.32);
+        border-radius: 10px;
+        > div {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .salesforce {
+    background-color: $salesforceBlue;
+  }
+  .pipedrive {
+    background-color: $black;
+  }
+  .hubspot {
+    background-color: $hubspotOrange;
+  }
+
+  .sheets {
+    background-color: #21a464;
+  }
+  .excel {
+    background-color: green;
+  }
+  .sellsy {
+    background-color: #020061b6;
+  }
+  .zoho {
+    background-color: #226db4;
+  }
+  .bullhorn {
+    background-color: #f16a22;
+  }
+  .dynamics {
+    background-color: #9892f1;
+  }
+}

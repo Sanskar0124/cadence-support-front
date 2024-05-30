@@ -1,0 +1,132 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+
+.container {
+  background: $white;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid #e7ebff;
+  height: calc(100vh - 150px);
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px 0;
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .back {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .logo {
+          width: 44px;
+          height: 44px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .logoPlaceholder {
+          width: 46px;
+          height: 46px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 0.2px solid #dadce0;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+
+          .titlePlaceholder {
+            width: 15ch;
+            min-height: 20px;
+            margin-bottom: 5px;
+            border: 0.2px solid #dfe1e6;
+          }
+
+          .textPlaceholder {
+            width: 30ch;
+            min-height: 16px;
+            border: 0.2px solid #dadce0;
+          }
+          h2 {
+            font-size: 1rem;
+            font-weight: 700;
+          }
+          > ul {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            font-weight: 400;
+            color: $lightBlue;
+
+            > li:first-child {
+              list-style: none;
+            }
+
+            > li:not(:first-child) {
+              margin-left: 20px;
+
+              > span {
+                margin-left: -3px;
+              }
+            }
+
+            @media (max-width: 832px) {
+              flex-direction: column;
+              gap: 2px;
+
+              > li:not(:first-child) {
+                list-style: none;
+                margin-left: 0;
+
+                > span {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: stretch;
+      gap: 20px;
+
+      > button {
+        height: 46px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        border-radius: 15px;
+        color: $lightBlue;
+        font-weight: 600;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  .mainContainer {
+    height: calc(100vh - 300px);
+    // padding-bottom: 30px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+
+      scrollbar-width: none;
+    }
+  }
+}

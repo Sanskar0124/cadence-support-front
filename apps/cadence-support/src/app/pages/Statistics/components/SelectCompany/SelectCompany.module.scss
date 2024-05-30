@@ -1,0 +1,112 @@
+@import '../../../../../../../../libs/themes/src/variables';
+@import '../../../mixins';
+
+.selectCompany {
+  position: relative;
+
+  .selectCompanyBtn {
+    font-weight: 400;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px !important;
+    width: 295px !important;
+
+    > p {
+      width: 95px;
+      text-align: left;
+      color: $lightBlue;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+
+  .noEmp {
+    text-align: center;
+    margin: 50px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $lightBlue;
+  }
+  .dropdown {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: $white;
+    z-index: 120;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 10px 20px 10px;
+    width: 295px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 24px 0px rgba(41, 43, 88, 0.12);
+    &.open {
+      display: flex;
+    }
+    .allCompaniesDiv {
+      display: flex;
+      height: 49px;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid $whiteShade1;
+      .allCompanybtn {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 14px;
+        height: 40px !important;
+        border-radius: 15px !important;
+        color: $lightBlue;
+        padding-left: 10px;
+        cursor: pointer;
+        margin-bottom: 8px;
+      }
+      .active {
+        background: $primaryGradient;
+        color: $white !important;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: calc(100vh - 450px);
+      overflow-y: scroll;
+      gap: 10px;
+
+      .companyCard {
+        width: 96%;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        height: 40px !important;
+        border-radius: 15px !important;
+        color: $lightBlue;
+        padding-left: 10px;
+        cursor: pointer;
+      }
+      .active {
+        background: $primaryGradient;
+        color: $white !important;
+      }
+    }
+  }
+}
+.linePlaceholders {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  .linePlaceholder {
+    height: 30px;
+    width: 250px;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../../../../../../../../../../../../../../../../libs/themes/src/variables';
+
+.DNDView {
+  width: 100%;
+  height: 100%;
+  .header {
+    margin-left: 10px;
+    .tabBtn {
+      color: $black;
+    }
+    .activeTab {
+      color: $mainPurple !important;
+      font-weight: 600 !important;
+    }
+  }
+  .body {
+    display: flex;
+    height: 100%;
+    @media screen and (max-width: 980px) {
+      width: 100%;
+    }
+  }
+}

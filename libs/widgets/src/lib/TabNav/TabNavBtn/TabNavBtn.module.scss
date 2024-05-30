@@ -1,0 +1,46 @@
+@import '../../../../../themes/src/variables';
+
+.tabNavBtn {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background 0.3s ease-in;
+
+  // THEMES
+  &.primaryAndLight {
+    background: $lightBlueGradient;
+    color: $black;
+
+    &.active {
+      background: $primaryGradient;
+      color: #fff;
+      border: none;
+    }
+  }
+
+  &.primaryAndWhite {
+    background: #fff;
+    color: $black;
+    &.active {
+      background: $primaryGradient;
+      color: #fff;
+    }
+  }
+
+  &.primaryAndGrey {
+    background: $whiteShade1;
+    color: $black;
+
+    &.active {
+      background: $primaryGradient;
+      color: #fff;
+      border: none;
+    }
+  }
+  &.bordered {
+    border: 2px solid $veryLightBlue;
+  }
+}

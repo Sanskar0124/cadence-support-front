@@ -1,0 +1,36 @@
+@import '../../../../../../../../../../../libs/themes/src/variables';
+
+.salesforceIntegration {
+  width: 100%;
+  height: calc(100vh - 205px);
+  border-radius: 15px;
+  padding: 0px 20px;
+  background: $white;
+  overflow-y: scroll;
+  h3 {
+    color: $veryLightBlue;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .header {
+    display: grid;
+    margin: 0 10px;
+    gap: 40px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    h2 {
+      margin: 33px 0px;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 14px;
+      color: $veryLightBlue;
+    }
+    .active {
+      font-weight: 700;
+      color: $mainPurple;
+    }
+  }
+}

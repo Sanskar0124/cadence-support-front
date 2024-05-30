@@ -1,0 +1,77 @@
+@import '../../../../../../../../../../../../../../../libs/themes/src/variables';
+.table {
+  height: calc(100vh - 300px);
+  overflow-y: scroll;
+  margin-top: 5px;
+  .rowTitle {
+    background: #fafbfc;
+    padding: 39px 23.33px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    h1 {
+      color: $lightBlue;
+    }
+  }
+  .rowValue {
+    background: #fdfdfd;
+    color: $lightBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 32px 0px 40px;
+    .active {
+      font-weight: 600;
+      color: $mainPurple;
+    }
+  }
+  .HeadConatiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .tableHead {
+      color: $lightBlue;
+      font-weight: 400;
+      text-align: center;
+      width: 100%;
+      margin: 0 2.5px;
+    }
+  }
+
+  .leads {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    margin-top: 5px;
+    gap: 5px;
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .lastRow {
+      padding: 20px 0px;
+      h1 {
+        margin-bottom: 10px;
+      }
+      h3 {
+        margin: 10px 0 0px 0px;
+      }
+    }
+    .lastValue {
+      h1,
+      h3 {
+        color: $mainPurple;
+      }
+      h1 {
+        font-weight: 600;
+      }
+      h3 {
+        font-weight: 400;
+      }
+    }
+  }
+}

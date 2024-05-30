@@ -1,0 +1,190 @@
+@import '../../../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../../../mixins';
+
+$grid-1280: 36% 24% 12% 10% 18%;
+
+.row {
+  display: grid;
+  grid-template-columns: 2.5fr 2.2fr 0.8fr 1fr 1fr;
+
+  font-size: 0.75rem;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+
+  @include screen-1280 {
+    grid-template-columns: $grid-1280;
+  }
+
+  &:hover,
+  &.active {
+    background-color: #f0f8fe;
+    border-radius: 20px;
+  }
+
+  // @include screen-1024 {
+  //   grid-template-columns: $grid-1024;
+  //   font-size: 0.6rem;
+  // }
+
+  .col {
+    padding: 4px 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    overflow: hidden;
+    &:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      > div {
+        &:first-child {
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+          border-radius: 14px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(
+            106.52deg,
+            rgba(162, 130, 232, 0.1) -11.57%,
+            rgba(126, 142, 231, 0.1) 50.39%,
+            rgba(68, 153, 233, 0.1) 116.35%
+          );
+          > svg {
+            height: 16px;
+            width: 14px;
+          }
+        }
+        &:last-child {
+          .top {
+            color: $lightBlue;
+            span {
+              font-size: 14px;
+              &:first-child {
+                text-transform: capitalize;
+              }
+            }
+            i {
+              margin: 0 2px;
+              margin-left: 2px;
+            }
+          }
+          .bottom {
+            font-size: 14px;
+            font-weight: 600;
+            color: $black;
+          }
+        }
+      }
+    }
+
+    &.leads {
+      > span {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(
+          106.52deg,
+          rgba(135, 151, 233, 0.1) -11.57%,
+          rgba(166, 135, 233, 0.1) -11.56%,
+          rgba(82, 162, 235, 0.1) 116.35%
+        );
+        border-radius: 100px;
+        padding: 8px 12px;
+        color: $mainPurple;
+      }
+    }
+
+    &.status {
+      display: flex;
+      justify-content: center;
+      min-width: 92px;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 0 auto;
+      > span {
+        padding: 8px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 10px;
+
+        &.notStarted,
+        &.processing {
+          background: rgba(109, 70, 107, 0.2);
+
+          color: #6d466b;
+        }
+
+        &.inProgress {
+          background: $greenTagBackground;
+          color: $ringover;
+        }
+
+        &.paused {
+          background: $yellowTagBackground;
+          color: $orange;
+          display: flex;
+          gap: 4px;
+        }
+
+        &.stopped {
+          background: $redTagBackground;
+          color: $red;
+        }
+
+        > span.pausedIcon {
+          height: 4px;
+        }
+      }
+    }
+
+    &.templateCardCreatedBy {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 3rem;
+      gap: 15px;
+      > div {
+        display: flex;
+        width: 280px;
+        align-items: center;
+        .profile {
+          position: relative;
+          .userProfilePicture {
+            display: table-cell;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .createdByDetails {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 48px;
+          margin: 12px 0 12px 10px;
+          justify-content: center;
+
+          span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      > span {
+        font-weight: 600;
+      }
+    }
+  }
+}

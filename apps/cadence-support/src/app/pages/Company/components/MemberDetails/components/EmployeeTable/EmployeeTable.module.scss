@@ -1,0 +1,52 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+
+.employeeTable {
+  background: #ffffff;
+  border: 1px solid rgba(231, 235, 255, 0.12);
+  border-radius: 15px;
+  padding: 1rem;
+  height: calc(100vh - 140px);
+  // height: calc(100% - 20px);
+  position: relative;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    .left {
+      .tabs {
+        // width: 678px !important;
+        &:nth-child(1) {
+          padding-left: 0;
+        }
+        .tabBtns {
+          text-transform: capitalize;
+          color: #8193a8;
+          font-weight: 400;
+          z-index: 0 !important;
+        }
+        .tabBtnActive {
+          font-weight: 600;
+          color: $mainPurple;
+          z-index: 0 !important;
+        }
+        .activePill {
+          background: transparent;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      button.filterThemedButton {
+        height: 80% !important;
+      }
+    }
+    .body {
+    }
+  }
+}

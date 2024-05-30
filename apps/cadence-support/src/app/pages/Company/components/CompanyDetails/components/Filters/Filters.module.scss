@@ -1,0 +1,88 @@
+@import '../../../../../../../../../../libs/themes/src/variables';
+@import '../../../../../mixins';
+
+.filters {
+  width: 28.5%;
+
+  padding: 10px 20px 373px 20px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #e7ebff;
+  background: $white;
+  transition: '0.25s ease-in-out';
+
+  &::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .title_and_reset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconcontainer {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      gap: 10px;
+      > p {
+        color: $black;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .wrapper {
+    height: calc(100vh - 110px);
+    overflow-y: scroll;
+    > .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $black;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      margin: 11px 0px 0px 0px;
+      > .resetBtn {
+        height: 23px !important;
+      }
+    }
+    .btncontainer {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .integrationBtn {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        margin-top: 10px;
+        flex-shrink: 0;
+        height: 40px !important;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        background: $whiteShade1;
+        color: $lightBlue;
+
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+      .active {
+        background: $primaryGradient !important;
+        color: #fff !important;
+      }
+    }
+  }
+}

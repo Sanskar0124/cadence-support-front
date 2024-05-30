@@ -1,0 +1,179 @@
+@import '../../../../../../../../libs/themes/src/variables';
+
+.customTaskModal > * {
+  text-align: left;
+}
+.customTaskModal {
+  width: 100%;
+  max-width: 735px;
+  max-height: 88vh;
+
+  .header {
+    text-align: left;
+    color: $blackShade6;
+    margin: -1.5px 0 20px 0;
+    font-weight: 700;
+    font-size: 1.142rem;
+    text-transform: capitalize;
+  }
+
+  .bodyContainer {
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 70vh;
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+
+    &.container {
+      text-align: left;
+    }
+    .checkboxContainer {
+      display: flex;
+      align-items: center;
+      width: 30%;
+    }
+    .radioContainer {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+    .singleInputincontainer {
+      width: 23.2rem !important;
+    }
+    .checkbox {
+      margin-left: 10px;
+      margin-top: -7.5px;
+    }
+    .radio {
+      margin-left: 10px;
+      margin-top: -7.5px;
+    }
+    .containerSmall {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    .label {
+      text-align: left;
+      font-weight: 450;
+      font-size: 14px;
+    }
+    .disabled {
+      cursor: not-allowed;
+    }
+    .numberInput {
+      text-align: left;
+    }
+    .error {
+      color: $red;
+    }
+    .inputWithError {
+      border-color: $red;
+    }
+    .errorCheckbox {
+      border-color: $red;
+    }
+    .actionLabel {
+      text-align: left;
+      width: 100%;
+      display: inline-block;
+      text-transform: capitalize;
+    }
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-self: flex-start;
+      & > div:nth-child(2) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-self: flex-start;
+        gap: 0.2em;
+      }
+    }
+    .companyDetails {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-self: flex-start;
+      gap: 33px;
+    }
+    & > div {
+      width: 100%;
+      & > .timeInputs {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-self: flex-start;
+        gap: 33px;
+      }
+    }
+  }
+
+  // .message {
+  //   display: flex;
+  //   justify-content: left;
+  //   width: 100%;
+
+  //   .astrix {
+  //     color: red;
+  //   }
+  // }
+
+  // .btn {
+  //   text-align: left;
+  //   width: 80%;
+  // }
+
+  .footer {
+    margin: 12px 0;
+    .btnSave {
+      width: 100%;
+      height: 50px;
+      box-shadow: 1px 8px 24px rgba(125, 142, 231, 0.4);
+      border-radius: 15px;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    & > .error {
+      width: 100%;
+      text-align: left;
+      color: $red;
+      margin-top: -1em;
+    }
+  }
+
+  .asterisk {
+    color: $red;
+  }
+  .errorMsg {
+    color: red;
+    justify-content: left;
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+
+.notice {
+  padding: 0.7em;
+  background-color: rgba(#ff3d47, 0.7);
+  border-radius: 10px;
+  color: #fdfbfb;
+}
+.timezone {
+  .css-gnn7uy-menu {
+    background: red !important;
+  }
+}
